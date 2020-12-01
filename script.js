@@ -1,21 +1,21 @@
 window.onload = function () {
     $(function(){
         const tasks = []
+        
        
-        
-        
-        $( 'button' ).on( 'click' ,()=>{
+        $( '#add' ).on( 'click' ,()=>{
 
-             randomNum = ( max ) =>{
+             randomNum = ()=> {
 
-                return  Math.floor( Math.random() * Math.floor( max ) )            
+                 r = Math.floor(Math.random() * Math.floor(255))
+                 g = Math.floor(Math.random() * Math.floor(255))
+                 b = Math.floor(Math.random() * Math.floor(255))
+                 randomColor = 'rgb(' + r + ',' + g + ',' + b + ')'
+                 return randomColor
+             }
+
             
-            }
-
-            r = randomNum(255)
-            g = randomNum(255)
-            b = randomNum(255)
-            randomColor = 'rgb('+r+','+g+','+b+')'
+            
             
             const task = {} 
             let input =$( '#in' ).val().trim()
@@ -24,12 +24,13 @@ window.onload = function () {
             $('#out').append(checkBox)
 
             let label = $( '<lable></label>' )
-            label.css('background-color', randomColor)
+            label.css('background-color', randomNum())
             label.text( task.text )
             $('#out').append( label ,'<br>' )
             
             tasks.push( task )
 
+            
             // if (checkBox.is(':checked')){
                 
             //     alert('work')
