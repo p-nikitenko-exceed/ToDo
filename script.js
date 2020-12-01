@@ -2,7 +2,6 @@ window.onload = function () {
     $(function(){
         const tasks = []
         
-       
         $( '#add' ).on( 'click' ,()=>{
 
              randomNum = ()=> {
@@ -14,9 +13,6 @@ window.onload = function () {
                  return randomColor
              }
 
-            
-            
-            
             const task = {} 
             let input =$( '#in' ).val().trim()
             task.text = input
@@ -30,7 +26,6 @@ window.onload = function () {
             
             tasks.push( task )
 
-            
             // if (checkBox.is(':checked')){
                 
             //     alert('work')
