@@ -1,42 +1,65 @@
 window.onload = function () {
-    $(function(){
+    $(function () {
         const tasks = []
-        
-        $( '#add' ).on( 'click' ,()=>{
+        const colors = ['rgb(255, 224, 131)', 'rgb(103, 215, 229)',
+            'rgb(145, 112, 203)', 'rgb(243, 121, 162)',
+            'rgb(242, 108, 105)', 'rgb(94, 179, 246)'
+        ]
+        takeColor = ''
+        randomColor = () => {
 
-             randomNum = ()=> {
+            let randomElement = colors[Math.floor(Math.random() * colors.length)]
+            return randomElement
 
-                 r = Math.floor(Math.random() * Math.floor(255))
-                 g = Math.floor(Math.random() * Math.floor(255))
-                 b = Math.floor(Math.random() * Math.floor(255))
-                 randomColor = 'rgb(' + r + ',' + g + ',' + b + ')'
-                 return randomColor
-             }
+        }
 
-            const task = {} 
-            let input =$( '#in' ).val().trim()
+        //function takeColor() {
+
+          $('.colorPalette').on('click', '.colorButton', function () {
+
+                a = $(this).css('background-color')
+                a =
+                console.log(a)
+                return a
+                
+            })
+         
+        //}
+        // checkcolor = takeColor()
+        // console.log(checkcolor)
+
+        function chk() {
+
+            $('#out').on('change', '.check', function () {
+                if ($(this).is(':checked')) {
+                    $(this).parent().css('background-color','red')
+                    console.log($(this))
+                }
+            })
+        }
+
+
+
+        $('#add').on('click', () => {
+            const task = {}
+            let input = $('#in').val().trim()
+            let li = $('<li class = liit></li>')
+            let checkBox = $('<input type = checkbox  class = check>')
+
             task.text = input
-            let checkBox = $('<input type = checkbox>')
-            $('#out').append(checkBox)
+            li.css('background-color', randomColor())
+            li.text(task.text)
+            li.append(checkBox)
+            $('#out').append(li, '<br>')
 
-            let label = $( '<lable></label>' )
-            label.css('background-color', randomNum())
-            label.text( task.text )
-            $('#out').append( label ,'<br>' )
-            
-            tasks.push( task )
+            tasks.push(task)
+        })
 
-            // if (checkBox.is(':checked')){
-                
-            //     alert('work')
-            //     }else{
-            //         alert('not work')
-            // }
-                
-            
-        
-        } )
-        
+        chk()
+
+
     })
-    
+
+
+
 }

@@ -1,4 +1,33 @@
-ol > li {
-    background-color: cyan;
+.liit{
 
+    list-style-type: none
+}
+
+.check{
+
+    float: left;
+}
+#b1 {
+
+    background-color: rgb(255, 224, 131);
+}
+#b2 {
+
+    background-color: rgb(145, 112, 203);
+}
+#b3 {
+
+    background-color: rgb(243, 121, 162)
+}
+#b4 {
+
+    background-color: rgb(242, 108, 105)
+}
+#b5 {
+
+    background-color: rgb(94, 179, 246)
+}
+#b6 {
+    
+    background-color: rgb(103, 215, 229)
 }
