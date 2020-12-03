@@ -5,58 +5,57 @@ window.onload = function () {
             'rgb(145, 112, 203)', 'rgb(243, 121, 162)',
             'rgb(242, 108, 105)', 'rgb(94, 179, 246)'
         ]
-        takeColor = ''
+        takeColor = 'rgb(255, 224, 131)'
         randomColor = () => {
 
             let randomElement = colors[Math.floor(Math.random() * colors.length)]
             return randomElement
 
         }
+       
 
-        //function takeColor() {
+        $('.colorPalette').on('click', '.colorButton', function () {
 
-          $('.colorPalette').on('click', '.colorButton', function () {
+            takeColor = $(this).css('background-color')
+            
+            
 
-                a = $(this).css('background-color')
-                a =
-                console.log(a)
-                return a
-                
-            })
-         
-        //}
-        // checkcolor = takeColor()
-        // console.log(checkcolor)
+            return takeColor
+
+        })
+
 
         function chk() {
 
             $('#out').on('change', '.check', function () {
                 if ($(this).is(':checked')) {
-                    $(this).parent().css('background-color','red')
-                    console.log($(this))
+                    $(this).parent().parent().css('background-color', takeColor)
+
                 }
             })
         }
 
 
-
         $('#add').on('click', () => {
             const task = {}
             let input = $('#in').val().trim()
-            let li = $('<li class = liit></li>')
+            let li = $('<li></li>')
             let checkBox = $('<input type = checkbox  class = check>')
-
+            let div = $('<div class = divCheckbox></div>')
+            let divText = $('<div class = divText></div>')
+            div.append(checkBox)
             task.text = input
             li.css('background-color', randomColor())
-            li.text(task.text)
-            li.append(checkBox)
-            $('#out').append(li, '<br>')
+            divText.text(task.text)
+            li.append(div, divText)
+            $('#out').append(li)
 
             tasks.push(task)
+
+
         })
 
         chk()
-
 
     })
 
