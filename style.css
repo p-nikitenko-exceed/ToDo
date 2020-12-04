@@ -1,115 +1,116 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    letter-spacing: 1px;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  letter-spacing: 1px;
 }
 
 #out {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 500px;
-    height: auto;
-    position: absolute;
-    top: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: 50px;
 }
 
 li {
-    text-indent: 15px;
-    text-align: justify;
-    list-style-type: none;
-    border-radius: 5px;
-    width: 435px;
-    height: 60px;
-    margin-bottom: 3px;
-
-
+  text-indent: 15px;
+  text-align: justify;
+  list-style-type: none;
+  border-radius: 5px;
+  width: 435px;
+  height: 60px;
+  margin-bottom: 3px;
 }
 
 .divCheckbox {
-    display: flex;
-    height: 60px;
-    border-right-width: 3px;
-    border-right-style: solid;
-    border-right-color: lavender;
-    float: left;
-    align-items: center;
-
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: white;
+  float: left;
+  align-items: center;
 }
 
 #b1 {
-
-    background-color: rgb(255, 224, 131);
-    
+  background-color: rgb(255, 224, 131);
 }
 
 #b2 {
-
-    background-color: rgb(145, 112, 203);
+  background-color: rgb(145, 112, 203);
 }
 
 #b3 {
-
-    background-color: rgb(243, 121, 162);
+  background-color: rgb(243, 121, 162);
 }
 
 #b4 {
-
-    background-color: rgb(242, 108, 105);
+  background-color: rgb(242, 108, 105);
 }
 
-
 #b5 {
-
-    background-color: rgb(94, 179, 246);
+  background-color: rgb(94, 179, 246);
 }
 
 #b6 {
-
-    background-color: rgb(103, 215, 229);
-
-
+  background-color: rgb(103, 215, 229);
 }
 
 #add {
-    background-color: #24A69A;
-    text-align: center;
-    border: none;
-    width: 50px;
-    height: 30px;
-    border-radius: 5px;
-    position: relative;
-    right: 15%;
+  background-color: #24a69a;
+  text-align: center;
+  border: none;
+  color: azure;
+  width: 50px;
+  height: 30px;
+  border-radius: 2px;
+  position: relative;
+  right: 13%;
+  bottom: 3px;
 }
 
 .colorButton {
-    width: 23px;
-    height: 23px;
-    border-radius: 5px;
-    border: none;
-    position: relative;
-    bottom: 45px;
-    left: 40%;
+  width: 23px;
+  height: 23px;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  bottom: 45px;
+  left: 40%;
 }
 
 #in {
-    width: 432px;
-    height: 60px;
-    border: 3px solid whitesmoke;
-    outline: none;
-    border-radius: 10px;
-
+  width: 425px;
+  height: 60px;
+  border: 3px solid whitesmoke;
+  outline: none;
+  border-radius: 10px;
+  text-indent: 20px;
+  font-size: 20px;
 }
 
 .divText {
-    margin: 23px;
-    color: #f9fdffd8;
+  margin-top: 13px;
+  color: #f9fdffd8;
+  font-size: 30px;
+  text-align: left;
 }
-.colorButton:active{
 
-    border: 2px double red;
+.activButton {
+  width: 23px;
+  height: 23px;
+  border-radius: 5px;
 
+  position: relative;
+  bottom: 50px;
+  left: 40%;
+  border: 5px double whitesmoke;
+}
+.check {
+  position: relative;
+  left: 20px;
 }

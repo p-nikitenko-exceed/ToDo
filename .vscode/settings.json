@@ -1,3 +1,7 @@
 {
-    "github.gitAuthentication": false
+    "github.gitAuthentication": false,
+    "editor.formatOnPaste": true,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "editor.fontSize": 16
 }
